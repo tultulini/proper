@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "object property util",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {    
+    "test": "mocha --timeout 60000 --exit -r @babel/register test/**/*.spec.js",
+    "compile": "babel src --out-dir dist --source-maps --watch"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,9 @@
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/plugin-transform-arrow-functions": "^7.7.4",
-    "@babel/preset-env": "^7.7.4"
+    "@babel/preset-env": "^7.7.4",
+    "@babel/register": "^7.7.4",
+    "mocha": "^6.2.2"
   },
   "babel": {
     "presets": [

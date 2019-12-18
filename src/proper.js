@@ -33,6 +33,10 @@ export default function proper(obj, pathToAction) {
             : Promise.resolve(result)
     }
     else {
+        if(runPathToAction)
+        {
+            pathToAction.apply(null, params)
+        }
         ret = result
     }
     return ret
