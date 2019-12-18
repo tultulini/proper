@@ -1,8 +1,9 @@
 {
   "name": "proper",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "object property util",
-  "main": "index.js",
+  "main": "dist/proper.js",
+  "types": "dist/proper.js.map",
   "scripts": {    
     "test": "mocha --timeout 60000 --exit -r @babel/register test/**/*.spec.js",
     "compile": "babel src --out-dir dist --source-maps",
