@@ -1,0 +1,45 @@
+{
+  "name": "proper",
+  "version": "1.0.0",
+  "description": "object property util",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tultulini/proper.git"
+  },
+  "author": "Tal Fisher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tultulini/proper/issues"
+  },
+  "homepage": "https://github.com/tultulini/proper#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-arrow-functions": "^7.7.4",
+    "@babel/preset-env": "^7.7.4"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": "3.4.0",
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-transform-arrow-functions"
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@tultulini"
+  }
+}
