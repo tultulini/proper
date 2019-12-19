@@ -2,7 +2,7 @@ import { isAsync, wrapPromiseForResult, isPromise } from "./utils/promises"
 import { isNullOrUndefined, isSomething } from "./utils/object"
 import { lastItem } from "./utils/arrays"
 
-export default function proper(obj, pathToAction) {
+export function proper(obj, pathToAction) {
     if (isNullOrUndefined(obj) || isNullOrUndefined(pathToAction)) {
         throw new Error('Need base object and pathToAction')
     }

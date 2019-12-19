@@ -1,5 +1,5 @@
 import assert from 'assert'
-import proper from '../src/proper';
+import {proper} from '../src/proper';
 describe('proper', function () {
     describe('full path', function () {
         it('Should activate pathToParam and have all path components', function () {

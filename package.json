@@ -1,13 +1,16 @@
 {
   "name": "proper",
-  "version": "1.0.2",
+  "version": "1.0.13",
   "description": "object property util",
   "main": "dist/proper.js",
   "types": "dist/proper.js.map",
-  "scripts": {    
+  "scripts": {
     "test": "mocha --timeout 60000 --exit -r @babel/register test/**/*.spec.js",
     "compile": "babel src --out-dir dist --source-maps",
-    "deploy": "npm publish"
+    "clean": "rm -rf dist",
+    "deploy": "cd dist && npm publish",
+    "prebuild": "node scripts/version.js && npm run clean && npm run compile && node dist/setup-package.js",
+    "build": "cd dist && npm pack"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
     "@babel/plugin-transform-arrow-functions": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/register": "^7.7.4",
+    "fs": "0.0.1-security",
     "mocha": "^6.2.2"
   },
   "babel": {
@@ -45,6 +49,8 @@
     ]
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@tultulini"
-  }
+    "registry": "https://npm.pkg.github.com/@tultulini",
+    "access": "public"
+  },
+  "dependencies": {}
 }
