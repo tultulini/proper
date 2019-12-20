@@ -1,6 +1,6 @@
 {
   "name": "propert",
-  "version": "1.0.31",
+  "version": "1.0.33",
   "description": "object property util",
   "main": "dist/proper.js",
   "types": "dist/proper.js.map",
