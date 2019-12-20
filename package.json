@@ -1,6 +1,6 @@
 {
-  "name": "proper",
-  "version": "1.0.13",
+  "name": "propert",
+  "version": "1.0.31",
   "description": "object property util",
   "main": "dist/proper.js",
   "types": "dist/proper.js.map",
@@ -47,10 +47,6 @@
     "plugins": [
       "@babel/plugin-transform-arrow-functions"
     ]
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@tultulini",
-    "access": "public"
   },
   "dependencies": {}
 }
