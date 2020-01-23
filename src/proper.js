@@ -33,8 +33,7 @@ export function proper(obj, pathToAction) {
             : Promise.resolve(result)
     }
     else {
-        if(runPathToAction)
-        {
+        if (runPathToAction) {
             pathToAction.apply(null, params)
         }
         ret = result
@@ -70,11 +69,13 @@ function getAlternativePathFuncs(params, pathError) {
 }
 
 function getFunctionArgs(func) {
-    return (func + '')
+    const functScript = (func + '')
+    const funcSplitter = functScript.indexOf('=>') > -1 ? ')=>{' : '){'
+    return functScript
         .replace(/[/][/].*$/mg, '') // strip single-line comments
         .replace(/\s+/g, '') // strip white space
         .replace(/[/][*][^/*]*[*][/]/g, '') // strip multi-line comments  
-        .split('){', 1)[0].replace(/^[^(]*[(]/, '') // extract the parameters  
+        .split(funcSplitter, 1)[0].replace(/^[^(]*[(]/, '') // extract the parameters  
         .replace(/=[^,]+/g, '') // strip any ES6 defaults  
         .split(',').filter(Boolean); // split & filter [""]
 }

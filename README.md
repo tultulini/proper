@@ -5,7 +5,7 @@ This util helps ensure that the using a path such as obj.prop_1.prop_2....prop_n
 
 ## How to use
 ```
-import { proper } from '@tultulini/proper'
+import { proper } from 'propert'
 
 const user = { cat: { name: 'terror' } }
 
